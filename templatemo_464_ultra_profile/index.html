@@ -14,6 +14,55 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/templatemo-style.css">
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+	<style>
+		/* .iso-box-wrapper {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.iso-box {
+			position: relative; 
+			margin: 15px;
+		}
+
+		.portfolio-thumb {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.portfolio-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		.portfolio-thumb:hover .portfolio-overlay {
+			opacity: 1;
+		} */
+		.iso-box {
+			position: relative; 
+			padding: 0 10px ;
+		}
+		.iso-box-wrapper {
+			/* max-width: 1200px; 원하는 최대 너비를 설정 */
+			margin: 0 auto; /* 중앙 정렬 */
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			/* padding: 0 15px; 좌우 패딩 추가 */
+		}
+
+	</style>
 <!-- 
 
 Ultra Profile
@@ -24,7 +73,8 @@ https://templatemo.com/tm-464-ultra-profile
 </head>
 <body data-spy="scroll" data-target="#rock-navigation">
 	<!-- START NAVIGATION -->
-	<div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation" role="navigation">
+	<!-- <div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation" role="navigation"> -->
+	<div class="navbar navbar-default bs-dos-nav navbar-fixed-top" role="navigation">
 		<div class="container">
 
 			<div class="navbar-header">
@@ -56,9 +106,9 @@ https://templatemo.com/tm-464-ultra-profile
 			<div class="row">
 				<div class="col-md-2 col-sm-1"></div>
 				<div class="col-md-8 col-sm-10">
-					<h1 class="tm-home-title"><strong>John White</strong></h1>
-					<h2 class="tm-home-subtitle">Creative Director</h2>
-					<p>I am a professional <strong>UX Designer</strong> and <strong>Front-End Developer</strong> creating modern and responsive designs for <strong>Web</strong> and <strong>Mobile</strong>. Let us work together. Thank you.</p>
+					<h1 class="tm-home-title"><strong>이창훈</strong></h1>
+					<h2 class="tm-home-subtitle">Full Stack Web Developer</h2>
+					<p>I am a professional <strong>Front-End Developer</strong> and <strong>Databse</strong>. Let us work together. Thank you.</p>
 					<a href="#work" class="btn btn-default smoothScroll tm-view-more-btn">Let's Begin</a>
 				</div>
 				<div class="col-md-2 col-sm-1"></div>
@@ -77,7 +127,7 @@ https://templatemo.com/tm-464-ultra-profile
 				<div class="col-md-4 col-sm-4">
 					<div class="work-wrapper">
 						<i class="fa fa-link"></i>
-						<h3 class="text-uppercase tm-work-h3">Mobile UX</h3>
+						<h3 class="text-uppercase tm-work-h3">Database</h3>
 						<hr>
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
 					</div>
@@ -85,7 +135,7 @@ https://templatemo.com/tm-464-ultra-profile
 				<div class="col-md-4 col-sm-4">
 					<div class="work-wrapper">
 						<i class="fa fa-flash"></i>
-						<h3 class="text-uppercase tm-work-h3">Web Design</h3>
+						<h3 class="text-uppercase tm-work-h3">Web Developer</h3>
 						<hr>
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
 					</div>
@@ -116,77 +166,92 @@ https://templatemo.com/tm-464-ultra-profile
 					<div class="iso-section">
 						<ul class="filter-wrapper clearfix">
 							<li><a href="#" class="opc-main-bg selected" data-filter="*">All</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".html">HTML</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Photoshop</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Wordpress</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".html">개인프로젝트</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Team 프로젝트1</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Team 프로젝트2</a></li>
+							<!-- <li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li> -->
 						</ul>
 						<div class="iso-box-section">
 							<div class="iso-box-wrapper col4-iso-box">
-								<div class="iso-box html photoshop wordpress mobile col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-box html col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img1.jpg" class="fluid-img" alt="portfolio img">
+										<div>
+											<h3>개인프로젝트 <strong>User</strong></h3>
+											<p>개발기간 : 2024.07 ~ 08</p>
+										</div>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html wordpress mobile col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-box html col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img2.jpg" class="fluid-img" alt="portfolio img">
+										<div>
+											<h3>개인프로젝트 <strong>Admin</strong></h3>
+											<p>개발기간 : 2024.07 ~ 08</p>
+										</div>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-box photoshop col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img3.jpg" class="fluid-img" alt="portfolio img">
+										<div>
+											<h3>팀 프로젝트 1 <strong>User</strong></h3>
+											<p>개발기간 : 2024.08 ~ 09</p>
+										</div>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html mobile col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-box photoshop col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img4.jpg" class="fluid-img" alt="portfolio img">
+										<div>
+											<h3>팀 프로젝트 1 <strong>Admin</strong></h3>
+											<p>개발기간 : 2024.08 ~ 09</p>
+										</div>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-box wordpress  col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img5.jpg" class="fluid-img" alt="portfolio img">
+										<div>
+											<h3>팀 프로젝트 2 <strong>User</strong></h3>
+											<p>개발기간 : 2024.09 ~ 10</p>
+										</div>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html photoshop col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-box wordpress  col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img6.jpg" class="fluid-img" alt="portfolio img">
+										<div>
+											<h3>팀 프로젝트 2 <strong>Admin</strong></h3>
+											<p>개발기간 : 2024.09 ~ 10</p>
+										</div>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box photoshop col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img7.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
-									</div>
-								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
+								<!-- <div class="iso-box html photoshop wordpress mobile  col-md-4 col-sm-4 col-xs-12">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img8.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -194,7 +259,7 @@ https://templatemo.com/tm-464-ultra-profile
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -210,27 +275,35 @@ https://templatemo.com/tm-464-ultra-profile
 			<div class="row">
 				<div class="col-md-6 col-sm-6">					
 					<h2 class="title">My <strong>Profile</strong></h2>
-					<p><span class="tm-info-label">Name</span> John White</p>
-					<p><span class="tm-info-label">Birthday</span> December 24, 1996</p>
-					<p><span class="tm-info-label">Address</span> Melbourne Victoria 3000 Australia</p>
-					<p><span class="tm-info-label">Phone</span> +001 020 0340 | 009 080 0760</p>
-					<p><span class="tm-info-label">Email</span> hello@company.com</p>
-					<p><span class="tm-info-label">Website</span> <a href="#" class="tm-red-text">www.company.com</a></p>
+					<p><span class="tm-info-label">Name</span> Changhun Lee</p>
+					<p><span class="tm-info-label">Birthday</span> November 4, 1998</p>
+					<p><span class="tm-info-label">Address</span> 서울시 노원구 중계4동</p>
+					<p><span class="tm-info-label">Phone</span> 010 2539 7660 </p>
+					<p><span class="tm-info-label">Email</span> chlee7660@gmail.com</p>
+					<!-- <p><span class="tm-info-label">Website</span> <a href="#" class="tm-red-text">www.company.com</a></p> -->
 				</div>
 				<div class="col-md-6 col-sm-6">
 					<h2 class="title"><strong>Some</strong> Skills</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-					<h4 class="tm-progress-label">Bootstrap <small class="progress-percent-small">100%</small></h4>
+					<h4 class="tm-progress-label">Bootstrap <small class="progress-percent-small">87%</small></h4>
 					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%;"></div>
 					</div>
-					<h4 class="tm-progress-label">HTML5 <small class="progress-percent-small">90%</small></h4>
+					<h4 class="tm-progress-label">HTML5 & CSS3 <small class="progress-percent-small">88%</small></h4>
 					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;"></div>
 					</div>
-					<h4 class="tm-progress-label">SEO <small class="progress-percent-small">80%</small></h4>
+					<h4 class="tm-progress-label">Database<span class="progress-percent-small">80%</span></h4>
 					<div class="progress tm-progress">
 						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+					</div>
+					<h4 class="tm-progress-label">JavaScript <small class="progress-percent-small">83%</small></h4>
+					<div class="progress tm-progress">
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width: 83%;"></div>
+					</div>
+					<h4 class="tm-progress-label">Spring <small class="progress-percent-small">81%</small></h4>
+					<div class="progress tm-progress">
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100" style="width: 81%;"></div>
 					</div>
 				</div>
 			</div>
@@ -245,7 +318,7 @@ https://templatemo.com/tm-464-ultra-profile
 				<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-7">
 					<div class="title">
 						<h2>This is <strong>me</strong></h2>
-						<h1 class="tm-red-text">Creative <strong>Director</strong></h1>
+						<h1 class="tm-red-text">Fullstack <strong>Developer</strong></h1>
 					</div>
 					<p>This is free Bootstrap v3.3.4 mobile friendly layout from <a rel="nofollow" href="https://templatemo.com">templatemo</a>. Feel free to use it for your website. Credit goes to <a rel="nofollow" href="https://pixabay.com">Pixabay</a> for photos used in this template. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
@@ -256,51 +329,6 @@ https://templatemo.com/tm-464-ultra-profile
 	<!-- END ABOUT -->
 
 	<!-- START SOCIAL -->
-	<section id="social" class="tm-social">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.3s">
-					<div class="media facebook">
-						<a href="#">
-							<div class="media-object pull-left">
-								<i class="fa fa-facebook"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading tm-social-title">Follow me on</h4>
-								<h3>Social Facebook</h3>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.6s">
-					<div class="media twitter">
-						<a href="#">
-							<div class="media-object pull-left">
-								<i class="fa fa-twitter"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading tm-social-title">Tweet me on</h4>
-								<h3>Social Twitter</h3>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.9s">
-					<div class="media pinterest">
-						<a href="#">
-							<div class="media-object pull-left">
-								<i class="fa fa-pinterest"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading tm-social-title">Pin me on</h4>
-								<h3>Social Pinterest</h3>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 	<!-- END SOCIAL -->
 
 	<!-- START CONTACT -->
@@ -344,6 +372,6 @@ https://templatemo.com/tm-464-ultra-profile
 	<script src="js/jquery.nav.js"></script>
 	<script src="js/isotope.js"></script>
 	<script src="js/imagesloaded.min.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="js/custom.js"></script><!--헤더숨기기 js -->
 </body>
 </html>

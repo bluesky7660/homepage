@@ -30,6 +30,9 @@ hr {
   padding-bottom: 40px;
   text-transform: uppercase;
 }
+.container{
+  margin: 0 auto;
+}
 
 /* START NAVIGATION */
 .sticky-navigation { opacity: 0; }
@@ -106,7 +109,7 @@ hr {
   color: #eb5424;
   font-weight: bold;
   padding-bottom: 40px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 .tm-view-more-btn {
   background: #eb5424;
@@ -162,7 +165,7 @@ hr {
 .tm-portfolio .container {
   width: 100%;
   padding: 0;
-  margin: 0;
+  
 }
 .tm-portfolio .col-md-3,
  .tm-portfolio .col-sm-3 {
@@ -337,10 +340,10 @@ hr {
 .tm-social {
   text-transform: uppercase;
 }
+
 .tm-social .container {
   width: 100%;
   padding: 0;
-  margin: 0;
 }
 .tm-social .col-md-4 {
   padding: 0;
