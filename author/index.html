@@ -13,6 +13,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<title>Author</title>
+	<style>
+		.count::after{
+			content: "%";
+			/* position: absolute; */
+		}
+		.single-count__text, .single-count img{
+			margin-bottom: 25px;
+		}
+	</style>
 </head>
 <body>
 
@@ -20,7 +29,7 @@
 	<nav class="site-navigation">
 		<div class="site-navigation-inner site-container">
 			<img src="./images/site-logo.png" alt="site logo">
-			<div class="main-navigation">
+			<!-- <div class="main-navigation">
 				<ul class="main-navigation__ul">
 					<li><a href="#">Homepage</a></li>
 					<li><a href="#">Page 1</a></li>
@@ -38,7 +47,7 @@
 				function myFunction(x) {
 					x.classList.toggle("change");
 				}
-			</script>
+			</script> -->
 
 		</div>
 	</nav>
@@ -53,14 +62,13 @@
 			<div class="top-banner__text">
 				<div class="top-banner__text-up">
 					<span class="brand-span">Hello! I'm</span>
-					<h2 class="top-banner__h2">Jhone</h2>
+					<h2 class="top-banner__h2">이창훈</h2>
 				</div>
 				<div class="top-banner__text-down">
-					<h2 class="top-banner__h2">Smith</h2>
-					<span class="brand-span">Author, Writer, Traveler</span>
+					<span class="brand-span">Web 개발자~!</span>
 				</div>
 				<p>One Man. One Mission. Can He Go Beyond?One Man. One Mission. Can He Go Beyond?</p>
-				<a href="#" class="brand-button">Read bio > </a>
+				<!-- <a href="#" class="brand-button">Read bio > </a> -->
 			</div>
 		</div>
 	</section>
@@ -177,31 +185,32 @@
 	<div class="fh5co-counter counters">
 		<div class="counter-inner site-container">
 			<div class="single-count">
-				<span class="count" data-count="50">0</span>
+				<span class="count" data-count="89">0</span>
 				<div class="single-count__text">
-					<img src="./images/counter-1.png" alt="counter icon">
-					<p>Books</p>
+					<!-- <img src="./images/counter-1.png" alt="counter icon"> -->
+					<p>HTML5 & CSS3</p>
+				</div>
+				<img src="../img/html&css.png" alt="" height="50px">
+			</div>
+			<div class="single-count">
+				<img src="../img/javascript.png" alt="" height="50px">
+				<span class="count" data-count="82">0</span>
+				<div class="single-count__text">
+					<p>JavaScript</p>
 				</div>
 			</div>
 			<div class="single-count">
-				<span class="count" data-count="600">0</span>
-				<div class="single-count__text">
-					<img src="./images/counter-2.png" alt="counter icon">
-					<p>Pages</p>
-				</div>
-			</div>
-			<div class="single-count">
-				<span class="count" data-count="2000">0</span>
+				<span class="count" data-count="73">0</span>
 				<div class="single-count__text">
 					<img src="./images/counter-3.png" alt="counter icon">
-					<p>Sales</p>
+					<p>Database</p>
 				</div>
 			</div>
 			<div class="single-count">
-				<span class="count" data-count="125">0</span>
+				<span class="count" data-count="70">0</span>
 				<div class="single-count__text">
 					<img src="./images/counter-4.png" alt="counter icon">
-					<p>Awards</p>
+					<p>Spring</p>
 				</div>
 			</div>
 		</div>
