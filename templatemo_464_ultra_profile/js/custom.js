@@ -95,6 +95,28 @@ jQuery(document).ready(function($){
         $container.isotope('layout');
     });
 
+	//자식크에 따라 부모크기설정
+	function adjustParentSize() {
+        const parent = document.querySelector('.iso-box-wrapper');
+        const children = document.querySelectorAll('.iso-box-wrapper .iso-box');
+        
+        let maxWidth = 0;
+        let maxHeight = 0;
+        
+        children.forEach(child => {
+            const rect = child.getBoundingClientRect();
+            maxWidth = Math.max(maxWidth, rect.right - parent.getBoundingClientRect().left);
+            maxHeight = Math.max(maxHeight, rect.bottom - parent.getBoundingClientRect().top);
+        });
+        
+        parent.style.width = `${maxWidth}px`;
+        parent.style.height = `${maxHeight}px`;
+    }
+
+    // 페이지가 로드되었을 때와 창 크기가 변경될 때 크기를 조정합니다.
+    window.addEventListener('load', adjustParentSize);
+    window.addEventListener('resize', adjustParentSize);
+
 });
 
 
@@ -108,10 +130,10 @@ jQuery(document).ready(function($){
     }); 
 
     /* NAVIGATION VISIBLE ON SCROLL */
-    mainNav();
-    $(window).scroll(function () {
-        mainNav();
-    });
+    // mainNav();
+    // $(window).scroll(function () {
+    //     mainNav();
+    // });
 
 
 	//처음 헤더 숨기기
