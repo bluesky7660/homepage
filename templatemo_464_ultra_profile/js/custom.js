@@ -117,8 +117,29 @@ jQuery(document).ready(function($){
     window.addEventListener('load', adjustParentSize);
     window.addEventListener('resize', adjustParentSize);
 
-});
+    $('.smoothScroll').click(function(event) {
+        event.preventDefault();
+        var target = $(this).data('target');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 800);
+    });
 
+    // $('#topButton').click(function() {
+    //     $('html, body').animate({
+    //         scrollTop: 0
+    //     }, 800);
+    // });
+    
+
+});
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 // MAIN NAVIGATION
 
@@ -155,3 +176,5 @@ jQuery(document).ready(function($){
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
+
+    

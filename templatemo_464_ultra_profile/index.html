@@ -53,7 +53,18 @@
 		
 		.work{
 			background:url("../img/main.png");
+			background-attachment: fixed;
 		}
+		.work *{
+			color: white !important;
+		}
+		/* .work::before{
+			content: '';
+			position: absolute;
+			background: white;
+			inset: 0;
+			opacity: 0.5;
+		} */
 		.iso-box {
 			position: relative; 
 			padding: 0 10px ;
@@ -92,16 +103,16 @@ https://templatemo.com/tm-464-ultra-profile
 					<span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Ultra Profile</a>
+				<a href="index.html" class="navbar-brand">Ultra Profile</a>
 			</div>
 			<nav class="collapse navbar-collapse" id="rock-navigation">
 				<ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
-					<li><a href="#home" class="smoothScroll">Home</a></li>
-					<li><a href="#work" class="smoothScroll">My Work</a></li>
-					<li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
-					<li><a href="#resume" class="smoothScroll">Resume</a></li>
-					<li><a href="#about" class="smoothScroll">About</a></li>
-					<li><a href="#contact" class="smoothScroll">Contact</a></li>
+					<li><a href="javascript:void(0);" class="smoothScroll" onclick="scrollToSection('home')">Home</a></li>
+					<li><a href="javascript:void(0);" class="smoothScroll" onclick="scrollToSection('work')">My Work</a></li>
+					<li><a href="javascript:void(0);" class="smoothScroll" onclick="scrollToSection('portfolio')">Portfolio</a></li>
+					<li><a href="javascript:void(0);" class="smoothScroll" onclick="scrollToSection('resume')">Resume</a></li>
+					<li><a href="javascript:void(0);" class="smoothScroll" onclick="scrollToSection('about')">About</a></li>
+					<li><a href="javascript:void(0);" class="smoothScroll" onclick="scrollToSection('contact')">Contact</a></li>
 				</ul>
 			</nav>
 

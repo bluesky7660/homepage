@@ -142,14 +142,28 @@ hr {
   padding-bottom: 10px;
 }
 .work-wrapper {
-  border: 1px solid #666;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid transparent;
   border-radius: 2px;
   text-align: center;
   padding: 80px 40px 80px 40px;
   -webkit-transition: all 0.6s ease-in;
           transition: all 0.6s ease-in;
 }
-.work-wrapper:hover { border-color: #eb5424; }
+
+.work-wrapper:hover { 
+  border-color: #eb5424; 
+  box-shadow: 0 0 50px #777;
+  
+  background-color: #fff;
+}
+.work-wrapper *{
+  transition: all 0.3s ease-in-out;
+}
+.work-wrapper:hover *{
+    color:#000 !important;
+    border-color: #000;
+}
 .work-wrapper .fa {
   color: #888888;
   font-size: 60px;
