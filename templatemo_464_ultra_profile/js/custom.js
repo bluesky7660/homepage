@@ -117,13 +117,13 @@ jQuery(document).ready(function($){
     window.addEventListener('load', adjustParentSize);
     window.addEventListener('resize', adjustParentSize);
 
-    $('.smoothScroll').click(function(event) {
-        event.preventDefault();
-        var target = $(this).data('target');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 800);
-    });
+    // $('.smoothScroll').click(function(event) {
+    //     event.preventDefault();
+    //     var target = $(this).data('target');
+    //     $('html, body').animate({
+    //         scrollTop: $(target).offset().top
+    //     }, 800);
+    // });
 
     // $('#topButton').click(function() {
     //     $('html, body').animate({
@@ -133,13 +133,52 @@ jQuery(document).ready(function($){
     
 
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+    // function scrollToSection(id) {
+    //     const element = document.getElementById(id);
+    //     element.scrollIntoView({ behavior: 'smooth' });
+    // }
+    // function scrollToTop() {
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // }
+// });
 function scrollToSection(id) {
     const element = document.getElementById(id);
     element.scrollIntoView({ behavior: 'smooth' });
 }
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+document.addEventListener("DOMContentLoaded", function() {
+    // 앵커 링크 클릭 이벤트 핸들러
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            scrollToSection(targetId);
+        });
+    });
+
+    // 스크롤 이벤트 핸들러
+    window.onscroll = function() {
+        scrollFunction();
+    };
+});
+// document.addEventListener("DOMContentLoaded", function() {
+//     // 특정 섹션으로 부드럽게 스크롤하는 함수
+//     function scrollToSection(id) {
+//         const element = document.getElementById(id);
+//         element.scrollIntoView({ behavior: 'smooth' });
+//     }
+
+//     // 앵커 링크 클릭 이벤트 핸들러
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             const targetId = this.getAttribute('href').substring(1);
+//             scrollToSection(targetId);
+//         });
+//     });
+// });
+
 
 // MAIN NAVIGATION
 
