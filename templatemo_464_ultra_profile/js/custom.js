@@ -163,34 +163,104 @@ jQuery(document).ready(function($){
 //     // };
 // });
 
-function scrollToSection(id) {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        console.error("Target element not found:", id);
-    }
-}
+// function scrollToSection(id) {
+//     const element = document.getElementById(id);
+//     if (element) {
+//         element.scrollIntoView({ behavior: 'smooth' });
+//     } else {
+//         console.error("Target element not found:", id);
+//     }
+// }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // 앵커 링크 클릭 이벤트 핸들러
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();  // 기본 링크 동작 방지
-            const targetId = this.getAttribute('href').substring(1);
-            scrollToSection(targetId);
-        });
-    });
+// document.addEventListener("DOMContentLoaded", function() {
+//     // 앵커 링크 클릭 이벤트 핸들러
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function(e) {
+//             e.preventDefault();  // 기본 링크 동작 방지
+//             const targetId = this.getAttribute('href').substring(1);
+//             scrollToSection(targetId);
+//         });
+//     });
 
-    // 페이지 로드 시 URL 해시를 확인하고 자동으로 스크롤
-    if (window.location.hash) {
-        const targetId = window.location.hash.substring(1);
-        scrollToSection(targetId);
-        // 해시를 제거하여 주소창에서 해시를 없애는 부분
-        history.replaceState(null, null, ' ');
-    }
-});
+//     // 페이지 로드 시 URL 해시를 확인하고 자동으로 스크롤
+//     if (window.location.hash) {
+//         const targetId = window.location.hash.substring(1);
+//         scrollToSection(targetId);
+        
+//         // 다음 이벤트 루프에서 해시 제거
+//         setTimeout(() => {
+//             history.replaceState(null, null, window.location.pathname + window.location.search);
+//         }, 0);
+//     }
+// });
 
+
+// function scrollToSection(id) {
+//     const element = document.getElementById(id);
+//     if (element) {
+//         element.scrollIntoView({ behavior: 'smooth' });
+//         // 해시 제거를 위한 setTimeout
+//         setTimeout(() => {
+//             history.replaceState(null, null, window.location.pathname + window.location.search);
+//         }, 500); // 스크롤이 완료될 시간을 충분히 고려한 시간
+//     } else {
+//         console.error("Target element not found:", id);
+//     }
+// }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // 앵커 링크 클릭 이벤트 핸들러
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function(e) {
+//             e.preventDefault();  // 기본 링크 동작 방지
+//             const targetId = this.getAttribute('href').substring(1);
+//             scrollToSection(targetId);
+//         });
+//     });
+
+//     // 페이지 로드 시 URL 해시를 확인하고 자동으로 스크롤
+//     if (window.location.hash) {
+//         const targetId = window.location.hash.substring(1);
+//         scrollToSection(targetId);
+//     }
+// });
+
+// function scrollToSection(id) {
+//     const element = document.getElementById(id);
+//     if (element) {
+//         element.scrollIntoView({ behavior: 'smooth' });
+
+//         // 해시 제거를 위해 요청 애니메이션 프레임 사용
+//         requestAnimationFrame(() => {
+//             requestAnimationFrame(() => {
+//                 history.replaceState(null, null, window.location.pathname + window.location.search);
+//             });
+//         });
+//     } else {
+//         console.error("Target element not found:", id);
+//     }
+// }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // 앵커 링크 클릭 이벤트 핸들러
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function(e) {
+//             e.preventDefault();  // 기본 링크 동작 방지
+//             const targetId = this.getAttribute('href').substring(1);
+//             scrollToSection(targetId);
+//         });
+//     });
+
+//     // 페이지 로드 시 URL 해시를 확인하고 자동으로 스크롤
+//     if (window.location.hash) {
+//         const targetId = window.location.hash.substring(1);
+//         scrollToSection(targetId);
+//     }
+// });
+
+// $(window).on('hashchange', function() {
+//     console.log('Hash changed to:', window.location.hash);
+// });
 
 
 // document.addEventListener("DOMContentLoaded", function() {
@@ -217,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
         scrollOffset: 75, //Height of Navigation Bar
         filter: ':not(.external)',
-        changeHash: true
+        changeHash: false
     }); 
 
     /* NAVIGATION VISIBLE ON SCROLL */
