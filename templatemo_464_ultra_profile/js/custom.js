@@ -143,25 +143,56 @@ jQuery(document).ready(function($){
     //     window.scrollTo({ top: 0, behavior: 'smooth' });
     // }
 // });
+// function scrollToSection(id) {
+//     const element = document.getElementById(id);
+//     element.scrollIntoView({ behavior: 'smooth' });
+// }
+// document.addEventListener("DOMContentLoaded", function() {
+//     // 앵커 링크 클릭 이벤트 핸들러
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             const targetId = this.getAttribute('href').substring(1);
+//             scrollToSection(targetId);
+//         });
+//     });
+
+//     // 스크롤 이벤트 핸들러
+//     // window.onscroll = function() {
+//     //     scrollFunction();
+//     // };
+// });
+
 function scrollToSection(id) {
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        console.error("Target element not found:", id);
+    }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     // 앵커 링크 클릭 이벤트 핸들러
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+            e.preventDefault();  // 기본 링크 동작 방지
             const targetId = this.getAttribute('href').substring(1);
             scrollToSection(targetId);
         });
     });
 
-    // 스크롤 이벤트 핸들러
-    window.onscroll = function() {
-        scrollFunction();
-    };
+    // 페이지 로드 시 URL 해시를 확인하고 자동으로 스크롤
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        scrollToSection(targetId);
+        // 해시를 제거하여 주소창에서 해시를 없애는 부분
+        history.replaceState(null, null, ' ');
+    }
 });
+
+
+
 // document.addEventListener("DOMContentLoaded", function() {
 //     // 특정 섹션으로 부드럽게 스크롤하는 함수
 //     function scrollToSection(id) {

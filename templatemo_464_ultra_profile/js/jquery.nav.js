@@ -199,11 +199,18 @@
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top;
-
-			$('html, body').animate({
-				scrollTop: offset
-			}, this.config.scrollSpeed, this.config.easing, callback);
+			var $target = $(target);
+			
+			// Check if the target element exists
+			if ($target.length) {
+				var offset = $target.offset().top;
+		
+				$('html, body').animate({
+					scrollTop: offset
+				}, this.config.scrollSpeed, this.config.easing, callback);
+			} else {
+				console.error("Target element not found:", target);
+			}
 		},
 
 		unbindInterval: function() {
